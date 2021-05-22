@@ -37,7 +37,7 @@ const SearchInput = (): any => {
         .then((response) => {
           setAutoComplete(response.data.data);
         })
-        .catch((error) => console.warn(error));
+        .catch((err) => console.warn(err));
   }, [username]);
 
   const handleSubmit = () => {
