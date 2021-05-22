@@ -1,8 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import SearchInput from '@/components/SearchInput';
 
-it('should render Search Input correctly', () => {
-  const tree = renderer.create(<SearchInput />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe('<SearchInput />', () => {
+  it('should render Search Input correctly', () => {
+    const wrapper = render(<SearchInput />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
