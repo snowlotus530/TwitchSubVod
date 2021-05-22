@@ -2,7 +2,8 @@
 
 exports[`should render Search Input correctly 1`] = `
 <form
-  className="styles__Container-sc-5265yl-0 eFpDQI"
+  className="styles__Container-sc-5265yl-0 cDsnuY"
+  disabled={true}
   onSubmit={[Function]}
 >
   <input
@@ -115,6 +116,7 @@ exports[`should render Search Input correctly 1`] = `
   </div>
   <button
     aria-label="submit"
+    disabled={true}
     type="submit"
   >
     <svg

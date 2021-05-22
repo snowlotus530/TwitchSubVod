@@ -91,12 +91,15 @@ const SearchInput = (): any => {
     }
   };
 
+  const isDisabled = username.length <= 0;
+
   return (
     <Container
       onSubmit={(event) => {
         event.preventDefault();
         handleSubmit();
       }}
+      disabled={isDisabled}
     >
       <input
         ref={inputRef}
@@ -120,7 +123,7 @@ const SearchInput = (): any => {
       <QualitySelection
         onChange={(event: any) => setVideoQuality(event.target.value)}
       />
-      <button type="submit" aria-label="submit">
+      <button type="submit" aria-label="submit" disabled={isDisabled}>
         <FiSearch size={14} />
         Search
       </button>
