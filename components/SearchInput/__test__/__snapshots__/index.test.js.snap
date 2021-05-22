@@ -7,11 +7,16 @@ exports[`should render Search Input correctly 1`] = `
 >
   <input
     aria-label="username"
+    autoComplete="off"
+    list="streamer-username"
     name="username"
     onChange={[Function]}
     placeholder="Streamer Username"
     type="text"
     value=""
+  />
+  <datalist
+    id="streamer-username"
   />
   <div
     className="styles__Container-ezdgk0-0 dCQtIG"
