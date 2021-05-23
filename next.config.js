@@ -1,5 +1,7 @@
 const withImages = require('next-images');
-module.exports = withImages({
+const { withSentryConfig } = require('@sentry/nextjs');
+
+const moduleExports = withImages({
   images: {
     domains: ['twitch.tv'],
   },
@@ -13,3 +15,9 @@ module.exports = withImages({
     ];
   },
 });
+
+const SentryWebpackPluginOptions = {
+  silent: true,
+};
+
+module.exports = withSentryConfig(moduleExports, SentryWebpackPluginOptions);
