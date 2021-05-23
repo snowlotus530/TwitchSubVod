@@ -81,8 +81,9 @@ const VodGallery = ({ data }: any) => {
       } else {
         setError(true);
       }
-    } catch {
+    } catch (err) {
       setError(true);
+      throw new Error(err);
     }
 
     window.scrollTo({ behavior: 'smooth', top: 340 });
@@ -119,7 +120,10 @@ const VodGallery = ({ data }: any) => {
             window.scrollTo({ behavior: 'smooth', top: 340 });
           }
         })
-        .catch(() => setError(true));
+        .catch((err) => {
+          setError(true);
+          throw new Error(err);
+        });
     },
     [offset, data],
   );

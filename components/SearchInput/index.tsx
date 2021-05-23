@@ -37,7 +37,10 @@ const SearchInput = (): any => {
         .then((response) => {
           setAutoComplete(response.data.data);
         })
-        .catch((err) => console.warn(err));
+        .catch((err) => {
+          console.warn(err);
+          throw new Error(err);
+        });
   }, [username]);
 
   const handleSubmit = () => {
@@ -75,9 +78,13 @@ const SearchInput = (): any => {
               });
             } catch (err) {
               setError('This user does not exist or is unavailable');
+              throw new Error('This user does not exist or is unavailable');
             }
           })
-          .catch((err) => setError(err.response.data.message))
+          .catch((err) => {
+            setError(err.response.data.message);
+            throw new Error(err);
+          })
           .finally(() => {
             setLoading(false);
           });
@@ -85,6 +92,7 @@ const SearchInput = (): any => {
         console.warn(err);
         setLoading(false);
         setError('Something went wrong');
+        throw new Error(err);
       }
     } else {
       setError('Enter a streamer username');
