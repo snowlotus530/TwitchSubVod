@@ -71,8 +71,8 @@ const DeletedClips: React.FC = () => {
                 `https://clips-media-assets2.twitch.tv/${vodId}-offset-${i}.mp4`,
               ]);
             })
-            .catch(() => {
-              return;
+            .catch((err) => {
+              throw new Error(err);
             });
         }
       } else {
@@ -89,6 +89,7 @@ const DeletedClips: React.FC = () => {
       alert(
         'Search time is longer than 5 minutes or Vod Id is Invalid or Search time is invalid',
       );
+      throw new Error('Search time is longer than 5 minutes or Vod Id is Invalid or Search time is invalid');
     }
   };
 
