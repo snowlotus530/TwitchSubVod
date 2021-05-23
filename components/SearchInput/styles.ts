@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.form`
+interface ContainerProps {
+  disabled: boolean;
+}
+
+export const Container = styled.form<ContainerProps>`
   height: 100%;
   display: flex;
   align-items: center;
@@ -38,6 +42,7 @@ export const Container = styled.form`
     width: 20rem;
     border: 2px solid var(--purple);
     color: var(--button-text);
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 
     & svg {
       margin-right: 0.5rem;
