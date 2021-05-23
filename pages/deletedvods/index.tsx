@@ -61,6 +61,7 @@ const DeletedVods: React.FC = () => {
         console.warn(err);
         setError(true);
         setLoading(false);
+        throw new Error(err);
       }
     } else {
       alert('Invalid Vod ID');

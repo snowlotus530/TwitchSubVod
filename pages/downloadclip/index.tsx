@@ -66,6 +66,7 @@ const DownloadClip: React.FC = () => {
       console.warn(err);
       setLoading(false);
       setError('Could not find the clip');
+      throw new Error('Could not find the clip');
     }
   };
 
