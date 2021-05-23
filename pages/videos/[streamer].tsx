@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               return channelResponse.data;
           });
       } catch (err) {
-        throw new Error(err);
+        console.warn(err);
       }
     });
 
