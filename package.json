@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "test": "jest --passWithNoTests",
     "test:dev": "jest --watchAll",
     "coverage": "jest --coverage",
