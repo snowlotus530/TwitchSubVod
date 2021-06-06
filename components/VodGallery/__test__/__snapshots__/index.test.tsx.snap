@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Vod Gallery correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <a
+        href="https://www.twitch.tv/xqcow"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div
+          class="styles__StreamerInformation-sc-1grrpo5-0 bXfPCD"
+        >
+          <div
+            title="Overwatch Professional tank player and full time streamer. EZ Clap"
+          >
+            <img
+              alt="xQcOW"
+              src="https://static-cdn.jtvnw.net/jtv_user_pictures/xqcow-profile_image-9298dca608632101-150x150.jpeg"
+            />
+          </div>
+          <div>
+            <h1>
+              xQcOW
+            </h1>
+            <p>
+              Overwatch Professional tank player and full time streamer. EZ Clap
+            </p>
+          </div>
+        </div>
+      </a>
+      <div
+        class="styles__Container-sc-1grrpo5-1 iRtqPc"
+      >
+        <div
+          class="stream"
+          title="[ NoPixel ] FROM 20K TO 100K OR BUST. BEST PLAYER WORLD OF ALL GAMES, BIG BIG."
+        >
+          <button
+            type="button"
+          >
+            <div>
+              <figure
+                class="styles__Image-sc-1grrpo5-2 KReUk"
+              >
+                <span>
+                  17:30:43
+                </span>
+              </figure>
+            </div>
+            <strong>
+              [ NoPixel ] FROM 20K TO 100K OR BUST. BEST PLAYER WORLD OF ALL GAMES, BIG BIG.
+            </strong>
+            <span>
+              <p>
+                Views: 
+                3.2M
+              </p>
+              <p>
+                3/28/2021
+              </p>
+            </span>
+          </button>
+        </div>
+        <div
+          class="stream"
+          title="[ NoPixel ] BIG DAY TODAY OMG! COURT CASE, CAZINO JUMP AND MORE WOW! WARLORD MOMENT INBOUND"
+        >
+          <button
+            type="button"
+          >
+            <div>
+              <figure
+                class="styles__Image-sc-1grrpo5-2 kDxQJQ"
+              >
+                <span>
+                  15:08:36
+                </span>
+              </figure>
+            </div>
+            <strong>
+              [ NoPixel ] BIG DAY TODAY OMG! COURT CASE, CAZINO JUMP AND MORE WOW! WARLORD MOMENT INBOUND
+            </strong>
+            <span>
+              <p>
+                Views: 
+                2.8M
+              </p>
+              <p>
+                3/26/2021
+              </p>
+            </span>
+          </button>
+        </div>
+        <div
+          class="pagination-button-container"
+        >
+          <button
+            class="pagination-button"
+            type="button"
+          >
+            next page
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <a
+      href="https://www.twitch.tv/xqcow"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        class="styles__StreamerInformation-sc-1grrpo5-0 bXfPCD"
+      >
+        <div
+          title="Overwatch Professional tank player and full time streamer. EZ Clap"
+        >
+          <img
+            alt="xQcOW"
+            src="https://static-cdn.jtvnw.net/jtv_user_pictures/xqcow-profile_image-9298dca608632101-150x150.jpeg"
+          />
+        </div>
+        <div>
+          <h1>
+            xQcOW
+          </h1>
+          <p>
+            Overwatch Professional tank player and full time streamer. EZ Clap
+          </p>
+        </div>
+      </div>
+    </a>
+    <div
+      class="styles__Container-sc-1grrpo5-1 iRtqPc"
+    >
+      <div
+        class="stream"
+        title="[ NoPixel ] FROM 20K TO 100K OR BUST. BEST PLAYER WORLD OF ALL GAMES, BIG BIG."
+      >
+        <button
+          type="button"
+        >
+          <div>
+            <figure
+              class="styles__Image-sc-1grrpo5-2 KReUk"
+            >
+              <span>
+                17:30:43
+              </span>
+            </figure>
+          </div>
+          <strong>
+            [ NoPixel ] FROM 20K TO 100K OR BUST. BEST PLAYER WORLD OF ALL GAMES, BIG BIG.
+          </strong>
+          <span>
+            <p>
+              Views: 
+              3.2M
+            </p>
+            <p>
+              3/28/2021
+            </p>
+          </span>
+        </button>
+      </div>
+      <div
+        class="stream"
+        title="[ NoPixel ] BIG DAY TODAY OMG! COURT CASE, CAZINO JUMP AND MORE WOW! WARLORD MOMENT INBOUND"
+      >
+        <button
+          type="button"
+        >
+          <div>
+            <figure
+              class="styles__Image-sc-1grrpo5-2 kDxQJQ"
+            >
+              <span>
+                15:08:36
+              </span>
+            </figure>
+          </div>
+          <strong>
+            [ NoPixel ] BIG DAY TODAY OMG! COURT CASE, CAZINO JUMP AND MORE WOW! WARLORD MOMENT INBOUND
+          </strong>
+          <span>
+            <p>
+              Views: 
+              2.8M
+            </p>
+            <p>
+              3/26/2021
+            </p>
+          </span>
+        </button>
+      </div>
+      <div
+        class="pagination-button-container"
+      >
+        <button
+          class="pagination-button"
+          type="button"
+        >
+          next page
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
