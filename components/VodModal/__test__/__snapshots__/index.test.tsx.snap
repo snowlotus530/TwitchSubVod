@@ -9,26 +9,35 @@ Object {
         class="styles__Container-xygqpp-0 kpTccR"
       >
         <div
-          class="styles__Ads-xygqpp-1 kyhAOP"
+          class="styles__Ads-xygqpp-1 jsbtIi"
         >
-          <a
-            href="https://ko-fi.com/pogulive"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Hey, these servers aren't free...
-            <img
-              alt="Buy Me a Coffee at ko-fi.com"
-              class="kofi-img"
-              src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2"
-              width="230px"
-            />
-            <p>
-              ... if you can, of course :)
-            </p>
-          </a>
+          <div>
+            <a
+              href="https://ko-fi.com/pogulive"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Hey, these servers aren't free...
+              <img
+                alt="Buy Me a Coffee at ko-fi.com"
+                class="kofi-img"
+                src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2"
+                width="230px"
+              />
+              <p>
+                ... if you can, of course :)
+              </p>
+            </a>
+            <button>
+              I already paid
+              <img
+                src="https://static-cdn.jtvnw.net/emoticons/v1/4339/3.0"
+                title="EleGiggle"
+              />
+            </button>
+          </div>
           <button>
-            Close Reminder 
+            Close Reminder
             <svg
               fill="currentColor"
               height="32"
@@ -55,26 +64,35 @@ Object {
       class="styles__Container-xygqpp-0 kpTccR"
     >
       <div
-        class="styles__Ads-xygqpp-1 kyhAOP"
+        class="styles__Ads-xygqpp-1 jsbtIi"
       >
-        <a
-          href="https://ko-fi.com/pogulive"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Hey, these servers aren't free...
-          <img
-            alt="Buy Me a Coffee at ko-fi.com"
-            class="kofi-img"
-            src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2"
-            width="230px"
-          />
-          <p>
-            ... if you can, of course :)
-          </p>
-        </a>
+        <div>
+          <a
+            href="https://ko-fi.com/pogulive"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Hey, these servers aren't free...
+            <img
+              alt="Buy Me a Coffee at ko-fi.com"
+              class="kofi-img"
+              src="https://cdn.ko-fi.com/cdn/kofi5.png?v=2"
+              width="230px"
+            />
+            <p>
+              ... if you can, of course :)
+            </p>
+          </a>
+          <button>
+            I already paid
+            <img
+              src="https://static-cdn.jtvnw.net/emoticons/v1/4339/3.0"
+              title="EleGiggle"
+            />
+          </button>
+        </div>
         <button>
-          Close Reminder 
+          Close Reminder
           <svg
             fill="currentColor"
             height="32"
