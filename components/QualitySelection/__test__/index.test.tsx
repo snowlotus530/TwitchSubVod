@@ -1,8 +1,7 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import QualitySelection from '@/components/QualitySelection';
 
 it('should render Quality Selection correctly', () => {
-  const tree = renderer.create(<QualitySelection />).toJSON();
+  const tree = render(<QualitySelection />);
   expect(tree).toMatchSnapshot();
 });
