@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface AdsProps {
   isVisible: boolean;
 }
+
+const rotateImage = keyframes`
+from {
+  transform: rotate(-7deg)
+}
+to {
+  transform: rotate(7deg)
+}
+`;
 
 export const Container = styled.div`
   margin-top: 2rem;
@@ -49,12 +58,18 @@ export const Ads = styled.div<AdsProps>`
   justify-content: center;
   align-items: center;
 
-  a {
+  div {
     color: #fafafa;
     background: #323b43;
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 1.5rem 2rem;
     border-radius: 8px;
     transition: background 0.2s ease;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: inherit;
+    }
 
     p {
       margin: 0;
@@ -66,17 +81,51 @@ export const Ads = styled.div<AdsProps>`
     :hover {
       background: #1b2125;
     }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 5px;
+      line-height: 32px;
+      background: var(--purple);
+      color: inherit;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: background 0.2s ease;
+
+      img {
+        margin-left: 1rem;
+        border: 0px solid rgba(0, 0, 0, 0);
+        width: 28px;
+      }
+
+      :hover {
+        background: var(--dark-purple);
+
+        img {
+          position: absolute;
+          border: 5px solid rgba(0, 0, 0, 0);
+          width: 64px;
+          margin-left: 10rem;
+          transition: all 0.2s ease;
+          animation: ${rotateImage} 0.5s ease alternate infinite;
+        }
+      }
+    }
   }
   @media (max-width: 768px) {
     padding: 0;
 
-    a {
-      padding: 2rem 2rem;
+    div {
+      padding: 1rem 2rem;
       margin-top: 0;
     }
   }
 
-  button {
+  > button {
     top: 5%;
     right: 3%;
     position: absolute;
@@ -96,6 +145,14 @@ export const Ads = styled.div<AdsProps>`
 
     :hover {
       background: var(--dark-purple);
+    }
+  }
+
+  @media (max-width: 480px) {
+    > button {
+      svg {
+        margin-left: 0;
+      }
     }
   }
 `;
