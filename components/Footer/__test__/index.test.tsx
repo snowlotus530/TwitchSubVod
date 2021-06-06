@@ -1,7 +1,7 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Footer from '..';
 
 it('should render Footer correctly', () => {
-  const tree = renderer.create(<Footer />).toJSON();
+  const tree = render(<Footer />);
   expect(tree).toMatchSnapshot();
 });
