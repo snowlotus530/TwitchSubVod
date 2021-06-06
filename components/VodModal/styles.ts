@@ -1,8 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface AdsProps {
   isVisible: boolean;
 }
+
+const rotateImage = keyframes`
+from {
+  transform: rotate(-7deg)
+}
+to {
+  transform: rotate(7deg)
+}
+`;
 
 export const Container = styled.div`
   margin-top: 2rem;
@@ -87,8 +96,23 @@ export const Ads = styled.div<AdsProps>`
       text-align: center;
       transition: background 0.2s ease;
 
+      img {
+        margin-left: 1rem;
+        border: 0px solid rgba(0, 0, 0, 0);
+        width: 28px;
+      }
+
       :hover {
         background: var(--dark-purple);
+
+        img {
+          position: absolute;
+          border: 5px solid rgba(0, 0, 0, 0);
+          width: 64px;
+          margin-left: 10rem;
+          transition: all 0.2s ease;
+          animation: ${rotateImage} 0.5s ease alternate infinite;
+        }
       }
     }
   }
