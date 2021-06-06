@@ -46,7 +46,13 @@ const VodModal = ({ videoUrl }: any) => {
               />
               <p>{`... if you can, of course :)`}</p>
             </a>
-            <button onClick={handleClick}>I already paid</button>
+            <button onClick={handleClick}>
+              I already paid
+              <img
+                title="EleGiggle"
+                src="https://static-cdn.jtvnw.net/emoticons/v1/4339/3.0"
+              />
+            </button>
           </div>
           <button onClick={() => setShowAd(false)}>
             {window.innerWidth > 480 && 'Close Reminder'}

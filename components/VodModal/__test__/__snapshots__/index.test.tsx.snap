@@ -9,7 +9,7 @@ Object {
         class="styles__Container-xygqpp-0 kpTccR"
       >
         <div
-          class="styles__Ads-xygqpp-1 fcuLsS"
+          class="styles__Ads-xygqpp-1 jsbtIi"
         >
           <div>
             <a
@@ -30,6 +30,10 @@ Object {
             </a>
             <button>
               I already paid
+              <img
+                src="https://static-cdn.jtvnw.net/emoticons/v1/4339/3.0"
+                title="EleGiggle"
+              />
             </button>
           </div>
           <button>
@@ -60,7 +64,7 @@ Object {
       class="styles__Container-xygqpp-0 kpTccR"
     >
       <div
-        class="styles__Ads-xygqpp-1 fcuLsS"
+        class="styles__Ads-xygqpp-1 jsbtIi"
       >
         <div>
           <a
@@ -81,6 +85,10 @@ Object {
           </a>
           <button>
             I already paid
+            <img
+              src="https://static-cdn.jtvnw.net/emoticons/v1/4339/3.0"
+              title="EleGiggle"
+            />
           </button>
         </div>
         <button>
