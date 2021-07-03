@@ -69,9 +69,18 @@ const VodGallery = ({ data }: any) => {
       videoQuality === 'chunked' ? '1080p60' : videoQuality
     }/index-dvr.m3u8`;
 
+    let dataUrlHighlight = `${process.env.NEXT_PUBLIC_CORS}https://${hostUrl}/${
+      splitString[1]
+    }/${videoQuality}/highlight-${result._id.replace('v', '')}.m3u8`;
+
     try {
       if (result.broadcast_type === 'upload') {
         setVodUrl(dataUrlUpload);
+        return;
+      }
+
+      if (result.broadcast_type === 'highlight') {
+        setVodUrl(dataUrlHighlight);
         return;
       }
 
