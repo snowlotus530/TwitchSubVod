@@ -70,7 +70,7 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
           <>
             <link
               rel="stylesheet"
-              href="https://video-react.github.io/assets/video-react.css"
+              href={`${process.env.NEXT_PUBLIC_CORS}https://video-react.github.io/assets/video-react.css`}
             />
             <Player
               playsInline
