@@ -4,3 +4,7 @@ declare module '*.svg' {
   const src: string;
   export default src;
 }
+
+declare module 'video-react' {
+  const Player: any;
+}
