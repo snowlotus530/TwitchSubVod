@@ -2,13 +2,15 @@ import React, { useEffect, useMemo, useState } from 'react';
 import ReactGA from 'react-ga';
 import ReactPlayer from 'react-player';
 import { FaWindowClose } from 'react-icons/fa';
+import { Player } from 'video-react';
 
 import { Container, Ads } from './styles';
 
 // 7days * 24 hours * 60 minutes * 60 seconds * 1000ms
 const timeInterval = 7 * 24 * 60 * 60 * 1000;
 
-const VodModal = ({ videoUrl }: any) => {
+const VodModal = ({ videoUrl, previewUrl }: any) => {
+  console.log(previewUrl);
   const [showAd, setShowAd] = useState(false);
   useEffect(() => {
     const paymentTime = Number(localStorage.getItem('paymentTime'));
@@ -26,6 +28,10 @@ const VodModal = ({ videoUrl }: any) => {
       action: videoUrl.split('_')[1],
     });
   };
+
+  const showCustomPlayer =
+    /^iP/.test(navigator.platform) ||
+    (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
 
   const renderVodModal = useMemo(() => {
     return (
@@ -60,21 +66,35 @@ const VodModal = ({ videoUrl }: any) => {
           </button>
         </Ads>
 
-        <ReactPlayer
-          url={videoUrl}
-          controls
-          width="100%"
-          height="100%"
-          config={{
-            file: {
-              hlsOptions: {
-                xhrSetup: (xhr: any, _url: any) => {
-                  xhr.open('GET', _url.replace('unmuted.ts', 'muted.ts'), true);
+        {showCustomPlayer ? (
+          <>
+            <Player
+              playsInline
+              poster={previewUrl}
+              src={videoUrl.replace(process.env.NEXT_PUBLIC_CORS, '')}
+            />
+          </>
+        ) : (
+          <ReactPlayer
+            url={videoUrl}
+            controls
+            width="100%"
+            height="100%"
+            config={{
+              file: {
+                hlsOptions: {
+                  xhrSetup: (xhr: any, _url: string) => {
+                    xhr.open(
+                      'GET',
+                      _url.replace('unmuted.ts', 'muted.ts'),
+                      true,
+                    );
+                  },
                 },
               },
-            },
-          }}
-        />
+            }}
+          />
+        )}
       </>
     );
   }, [videoUrl, showAd, setShowAd]);

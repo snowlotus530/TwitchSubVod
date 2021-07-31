@@ -44,10 +44,13 @@ export const formatNumber = (num: number) => {
 const VodGallery = ({ data }: any) => {
   const [videos, setVideos] = useState(data);
   const { vodUrl, setVodUrl, videoQuality } = useGlobal();
-  const streamerInformation: ResultProps['channel'] = data[0].channel;
   const [offset, setOffset] = useState(0);
   const [totalVideos, setTotalVideos] = useState(50);
+  const [previewUrl, setPreviewUrl] = useState('');
+
+  const streamerInformation: ResultProps['channel'] = data[0].channel;
   data[0].channel._id !== videos[0].channel._id && setVideos(data);
+
   useEffect(() => {
     ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_TRACKING}`, {
       testMode: process.env.NODE_ENV === 'test',
@@ -57,6 +60,8 @@ const VodGallery = ({ data }: any) => {
   const [error, setError] = useState(false);
 
   const handleVideo = async (result: any) => {
+    setPreviewUrl(result.preview.medium);
+
     const splitString = await result.animated_preview_url.match(
       /^https?:\/\/(?:[\w\.\/]+)\/(.+)\/storyboards/,
     );
@@ -183,7 +188,7 @@ const VodGallery = ({ data }: any) => {
       )}
       {vodUrl && (
         <>
-          <VodModal videoUrl={vodUrl} />
+          <VodModal videoUrl={vodUrl} previewUrl={previewUrl} />
           <a
             href="https://ko-fi.com/pogulive"
             target="_blank"

@@ -3,7 +3,8 @@
     <a href="https://github.com/Alissonsleal/twitch-sub-vod/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Alissonsleal/twitch-sub-vod?color=sucess&style=flat-square"></a>
     <a href="https://github.com/Alissonsleal/twitch-sub-vod/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Alissonsleal/twitch-sub-vod?color=sucess&style=flat-square"></a>
     <a href="https://github.com/Alissonsleal/twitch-sub-vod/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Alissonsleal/twitch-sub-vod?color=sucess&style=flat-square"></a>
-    <a href="https://github.com/Alissonsleal/"><img alt="Alisson Leal GitHub Profile" src="https://img.shields.io/badge/made%20by-Alisson%20Leal-sucess?style=flat-square&logo=appveyor"></a>
+    <a href="https://github.com/Alissonsleal/"><img alt="Alisson Leal GitHub Profile" src="https://img.shields.io/badge/made%20by-Alisson%20Leal-sucess?style=flat-square&logo=appveyor"></a>   
+    <a href="https://sonarcloud.io/api/project_badges/measure?project=Alissonsleal_TwitchSubVod&metric=alert_status"><img alt="Quality Gate" src="https://sonarcloud.io/api/project_badges/measure?project=Alissonsleal_TwitchSubVod&metric=alert_status"></a>
 </p>
 
 # Twitch Sub Vod
