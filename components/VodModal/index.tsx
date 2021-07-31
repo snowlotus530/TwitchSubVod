@@ -68,10 +68,6 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
 
         {showCustomPlayer ? (
           <>
-            <link
-              rel="stylesheet"
-              href={`${process.env.NEXT_PUBLIC_CORS}https://video-react.github.io/assets/video-react.css`}
-            />
             <Player
               playsInline
               poster={previewUrl}
