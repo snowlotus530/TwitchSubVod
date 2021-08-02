@@ -83,7 +83,8 @@ const Videos = ({
     ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_TRACKING}`, {
       testMode: process.env.NODE_ENV === 'test',
     });
-    ReactGA.pageview(`/videos/${data?.videos[0].channel.name}`);
+    data?.videos[0].channel.name &&
+      ReactGA.pageview(`/videos/${data.videos[0].channel.name}`);
   }, []);
 
   if (!data) {
