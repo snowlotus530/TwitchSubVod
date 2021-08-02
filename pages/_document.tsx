@@ -93,6 +93,12 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/video-player-css-ios.css" />
 
           <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8414071548156466"
+            crossOrigin="anonymous"
+          ></script>
+
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                   (function (c, l, a, r, i, t, y) {
