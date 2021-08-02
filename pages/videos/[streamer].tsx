@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
+import ReactGA from 'react-ga';
 import api from '@/utils/services/api';
 import VodGallery from '@/components/VodGallery';
 import LoadingModal from '@/components/LoadingModal';
@@ -16,6 +18,7 @@ interface TwitchVideoProps {
     channel: {
       _id: number;
       display_name: string;
+      name: string;
       description: string;
       followers: number;
       logo: string;
@@ -75,6 +78,13 @@ const Videos = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { videoQuality } = useGlobal();
   const data: TwitchVideoProps = twitchData;
+
+  useEffect(() => {
+    ReactGA.initialize(`${process.env.NEXT_PUBLIC_GOOGLE_TRACKING}`, {
+      testMode: process.env.NODE_ENV === 'test',
+    });
+    ReactGA.pageview(`/videos/${data?.videos[0].channel.name}`);
+  }, []);
 
   if (!data) {
     return (
