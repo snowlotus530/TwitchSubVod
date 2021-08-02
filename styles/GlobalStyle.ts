@@ -5,9 +5,11 @@ const GlobalStyle = createGlobalStyle`
     --purple: #9147ff;
     --dark-purple: #7c2cf4;
     --button-text: #f1f1f1;
-    --background: ${(props: any) => props.theme.background};
-    --light-background: ${(props: any) => props.theme.lightBackground};
-    --text: ${(props: any) => props.theme.text};
+    --background: ${({ theme }: any) => theme.background};
+    --light-background: ${({ theme }: any) => theme.lightBackground};
+    --text: ${({ theme }: any) => theme.text};
+    --gray800: #2F2F2F;
+    --pink700: #D70070;
   }
 
   * {
