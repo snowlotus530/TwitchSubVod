@@ -10,7 +10,6 @@ import { Container, Ads } from './styles';
 const timeInterval = 7 * 24 * 60 * 60 * 1000;
 
 const VodModal = ({ videoUrl, previewUrl }: any) => {
-  console.log(previewUrl);
   const [showAd, setShowAd] = useState(false);
   useEffect(() => {
     const paymentTime = Number(localStorage.getItem('paymentTime'));

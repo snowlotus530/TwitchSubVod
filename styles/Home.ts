@@ -73,3 +73,19 @@ export const AnimationContainer = styled.div`
     margin-top: 0.5rem;
   }
 `;
+
+export const AvatarsGroupContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 990px;
+  padding: 0 1rem;
+`;
+
+export const AvatarsGroup = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(227px, auto));
+  grid-gap: 1rem;
+`;

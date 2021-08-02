@@ -3,7 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = withImages({
   images: {
-    domains: ['twitch.tv'],
+    domains: ['twitch.tv', 'static-cdn.jtvnw.net'],
   },
   async redirects() {
     return [
