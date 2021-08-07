@@ -78,6 +78,16 @@ const VodGallery = ({ data }: any) => {
       splitString[1]
     }/${videoQuality}/highlight-${result._id.replace('v', '')}.m3u8`;
 
+    ReactGA.event({
+      category: 'SearchedUserForDeletedVod',
+      action: `${splitString[1]}`,
+    });
+
+    axios.post(`/api/most-watched`, {
+      streamer: streamerInformation.name,
+      vod: result._id,
+    });
+
     try {
       if (result.broadcast_type === 'upload') {
         setVodUrl(dataUrlUpload);
@@ -101,11 +111,6 @@ const VodGallery = ({ data }: any) => {
     }
 
     window.scrollTo({ behavior: 'smooth', top: 340 });
-
-    ReactGA.event({
-      category: 'SearchedUserForDeletedVod',
-      action: `${splitString[1]}`,
-    });
   };
 
   const timeToHMS = (s: number) => {
