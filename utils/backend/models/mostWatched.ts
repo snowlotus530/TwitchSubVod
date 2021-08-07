@@ -27,11 +27,5 @@ const mostWatched = new mongoose.Schema(
   },
 );
 
-// mongoose.models = {};
-
-// const MostWatched = mongoose.model<IMostWatched>('MostWatched', mostWatched);
-
-// export default MostWatched;
-
 export default mongoose.models.MostWatched ||
   mongoose.model<IMostWatched>('MostWatched', mostWatched);

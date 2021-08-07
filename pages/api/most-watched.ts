@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import connectDB from '@/utils/backend/middleware/mongodb';
 import MostWatched from '@/utils/backend/models/mostWatched';
+import MostWatchedStreamer from '@/utils/backend/models/mostWatchedStreamers';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
@@ -12,6 +13,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           { vod: vod.replace('v', '') },
           {
             vod: vod.replace('v', ''),
+            $inc: { count: 1 },
+            streamer: streamer,
+          },
+          { upsert: true, new: true },
+        );
+
+        await MostWatchedStreamer.findOneAndUpdate(
+          { streamer: streamer },
+          {
             $inc: { count: 1 },
             streamer: streamer,
           },
