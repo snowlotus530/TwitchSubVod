@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import Image from 'next/image';
+
+export const Link = styled.a`
+  width: 100%;
+`;
 
 export const AvatarContainer = styled.div`
   * {
@@ -14,7 +17,7 @@ export const AvatarContainer = styled.div`
   gap: 8px;
   color: var(--text);
   width: 100%;
-  max-width: 227px;
+  max-width: 100%;
   transition: transform 0.2s ease-in-out;
 
   :hover {
@@ -22,9 +25,9 @@ export const AvatarContainer = styled.div`
   }
 `;
 
-export const StreamerAvatar = styled(Image)`
+export const StreamerAvatar = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--gray800);

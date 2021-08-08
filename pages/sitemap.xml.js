@@ -1,5 +1,6 @@
 import React from 'react';
-import data from './videos/data.json';
+import { getMostWatchedStreamers } from '@/utils/backend/queries';
+import dbConnect from '@/utils/backend/lib/dbConnect';
 
 const EXTERNAL_DATA_URL = 'https://pogu.live/videos';
 
@@ -13,19 +14,19 @@ const createSitemap = (streamers) => {
       <priority>1</priority>
     </url>
     <url>
-      <loc>https://pogu.live/DeletedClips</loc>
+      <loc>https://pogu.live/deletedclips</loc>
       <lastmod>2021-02-06</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1</priority>
     </url>
     <url>
-      <loc>https://pogu.live/DeletedVods</loc>
+      <loc>https://pogu.live/deletedvods</loc>
       <lastmod>2021-02-06</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1</priority>
     </url>
     <url>
-      <loc>https://pogu.live/DownloadClip</loc>
+      <loc>https://pogu.live/downloadclip</loc>
       <lastmod>2021-02-06</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1</priority>
@@ -47,7 +48,18 @@ const createSitemap = (streamers) => {
 
 class Sitemap extends React.Component {
   static async getInitialProps({ res }) {
-    const streamers = data.mostSearchedStreamers;
+    await dbConnect();
+    const mostWatchedRanking = await getMostWatchedStreamers(300, 0);
+
+    const streamers = mostWatchedRanking.map((streamer) =>
+      streamer.streamer.toLowerCase(),
+    );
+
+    console.log(streamers.length);
+
+    console.log(
+      'GET getMostWatchedStreamers fn(getInitialProps) screen(/sitemap.xml)',
+    );
 
     res.setHeader('Content-Type', 'text/xml');
     res.write(createSitemap(streamers));

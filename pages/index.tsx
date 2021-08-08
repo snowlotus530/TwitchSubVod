@@ -12,6 +12,8 @@ import Footer from '@/components/Footer';
 import SearchInput from '@/components/SearchInput';
 import Avatar from '@/components/Avatar';
 import api from '@/utils/services/api';
+import { getMostWatchedStreamers } from '@/utils/backend/queries';
+import dbConnect from '@/utils/backend/lib/dbConnect';
 
 interface IUsers {
   bio: string;
@@ -28,25 +30,15 @@ interface IStreamers {
   streamers: IUsers[];
 }
 
-// todo: automate this with analitics data
-const streamers = [
-  'Elwycco',
-  'Jltomy',
-  'JLTomy',
-  'Zwave69',
-  'Melina',
-  'Kamet0',
-  'Squeezie',
-  'Dekarldent',
-  'Berry0314',
-  'Amouranth',
-  'Marvincalifornia',
-  'Adinross',
-  'Locklear',
-];
-
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get(`users?login=${streamers.join(',')}`);
+  await dbConnect();
+  const streamers = await getMostWatchedStreamers(16, 0);
+
+  const { data } = await api.get(
+    `users?login=${streamers.map((streamer) => streamer.streamer).join(',')}`,
+  );
+
+  console.log('GET getMostWatchedStreamers fn(getStaticPaths) screen(/)');
 
   return {
     props: {

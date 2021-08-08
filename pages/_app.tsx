@@ -32,6 +32,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [theme, router.events]);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const kofiLink = document.querySelectorAll<HTMLAnchorElement>(
+        '.kfds-text-is-link-dark',
+      );
+      kofiLink.forEach((el) => {
+        el.rel = 'noopener noreferrer';
+      });
+    }
+  }, []);
+
   const themeSwitcher = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
@@ -41,22 +52,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Twitch Sub Vod</title>
       </Head>
-      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-        {
-          <button
-            style={{
-              position: 'absolute',
-              margin: 8,
-              backgroundColor: 'rgba(200,200,200,0.5)',
-              borderRadius: '15px',
-              fontSize: 16,
-              padding: '4px',
-            }}
-            onClick={themeSwitcher}
-          >
-            🌞 🌜
-          </button>
-        }
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <button
+          style={{
+            position: 'absolute',
+            margin: 8,
+            backgroundColor: '#000',
+            color: '#FFF',
+            borderRadius: '15px',
+            fontSize: 16,
+            padding: '6px 8px',
+          }}
+          onClick={themeSwitcher}
+        >
+          🌞 🌜
+        </button>
         <GlobalStyle />
         <GlobalProvider>
           <Component {...pageProps} />
