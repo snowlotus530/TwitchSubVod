@@ -1,8 +1,7 @@
 import React from 'react';
 import { FiExternalLink, FiSearch } from 'react-icons/fi';
-import Link from 'next/link';
 
-import { Container } from './styles';
+import { Container, Link } from './styles';
 
 interface LinksProps {
   home?: boolean;

@@ -6,7 +6,295 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+        class="styles__Container-cfnpnh-0 hlHjgV"
+      >
+        <a
+          aria-label="Home"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            Home
+          </span>
+        </a>
+      </div>
+      <div
+        class="styles__Container-cfnpnh-0 hlHjgV"
+      >
+        <a
+          aria-label="DeletedClips"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/deletedclips"
+        >
+          <span>
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            Search for deleted clips
+          </span>
+        </a>
+      </div>
+      <div
+        class="styles__Container-cfnpnh-0 hlHjgV"
+      >
+        <a
+          aria-label="DeletedVods"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/deletedvods"
+        >
+          <span>
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            Search for deleted vods
+          </span>
+        </a>
+      </div>
+      <div
+        class="styles__Container-cfnpnh-0 hlHjgV"
+      >
+        <a
+          aria-label="DownloadClip"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/downloadclip"
+        >
+          <span>
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            Download Twitch Clips
+          </span>
+        </a>
+      </div>
+      <div
+        class="styles__Container-cfnpnh-0 hlHjgV"
+      >
+        <a
+          aria-label="Home"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/"
+        >
+          <span>
+            Home
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline
+                points="15 3 21 3 21 9"
+              />
+              <line
+                x1="10"
+                x2="21"
+                y1="14"
+                y2="3"
+              />
+            </svg>
+          </span>
+        </a>
+        <a
+          aria-label="DeletedClips"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/deletedclips"
+        >
+          <span>
+            Search for Deleted Clips
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline
+                points="15 3 21 3 21 9"
+              />
+              <line
+                x1="10"
+                x2="21"
+                y1="14"
+                y2="3"
+              />
+            </svg>
+          </span>
+        </a>
+        <a
+          aria-label="DeletedVods"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/deletedvods"
+        >
+          <span>
+            Search for Deleted Vods
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline
+                points="15 3 21 3 21 9"
+              />
+              <line
+                x1="10"
+                x2="21"
+                y1="14"
+                y2="3"
+              />
+            </svg>
+          </span>
+        </a>
+        <a
+          aria-label="DownloadClip"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/downloadclip"
+        >
+          <span>
+            Download Twitch Clips
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline
+                points="15 3 21 3 21 9"
+              />
+              <line
+                x1="10"
+                x2="21"
+                y1="14"
+                y2="3"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="styles__Container-cfnpnh-0 hlHjgV"
+    >
+      <a
+        aria-label="Home"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/"
       >
         <span>
           <svg
@@ -34,9 +322,15 @@ Object {
           </svg>
           Home
         </span>
-      </div>
-      <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+      </a>
+    </div>
+    <div
+      class="styles__Container-cfnpnh-0 hlHjgV"
+    >
+      <a
+        aria-label="DeletedClips"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/deletedclips"
       >
         <span>
           <svg
@@ -64,9 +358,15 @@ Object {
           </svg>
           Search for deleted clips
         </span>
-      </div>
-      <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+      </a>
+    </div>
+    <div
+      class="styles__Container-cfnpnh-0 hlHjgV"
+    >
+      <a
+        aria-label="DeletedVods"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/deletedvods"
       >
         <span>
           <svg
@@ -94,9 +394,15 @@ Object {
           </svg>
           Search for deleted vods
         </span>
-      </div>
-      <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+      </a>
+    </div>
+    <div
+      class="styles__Container-cfnpnh-0 hlHjgV"
+    >
+      <a
+        aria-label="DownloadClip"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/downloadclip"
       >
         <span>
           <svg
@@ -124,9 +430,15 @@ Object {
           </svg>
           Download Twitch Clips
         </span>
-      </div>
-      <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+      </a>
+    </div>
+    <div
+      class="styles__Container-cfnpnh-0 hlHjgV"
+    >
+      <a
+        aria-label="Home"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/"
       >
         <span>
           Home
@@ -155,6 +467,12 @@ Object {
             />
           </svg>
         </span>
+      </a>
+      <a
+        aria-label="DeletedClips"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/deletedclips"
+      >
         <span>
           Search for Deleted Clips
           <svg
@@ -182,6 +500,12 @@ Object {
             />
           </svg>
         </span>
+      </a>
+      <a
+        aria-label="DeletedVods"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/deletedvods"
+      >
         <span>
           Search for Deleted Vods
           <svg
@@ -209,6 +533,12 @@ Object {
             />
           </svg>
         </span>
+      </a>
+      <a
+        aria-label="DownloadClip"
+        class="styles__Link-cfnpnh-1 bvpnnQ"
+        href="/downloadclip"
+      >
         <span>
           Download Twitch Clips
           <svg
@@ -236,241 +566,7 @@ Object {
             />
           </svg>
         </span>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="styles__Container-cfnpnh-0 fkFsiv"
-    >
-      <span>
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        Home
-      </span>
-    </div>
-    <div
-      class="styles__Container-cfnpnh-0 fkFsiv"
-    >
-      <span>
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        Search for deleted clips
-      </span>
-    </div>
-    <div
-      class="styles__Container-cfnpnh-0 fkFsiv"
-    >
-      <span>
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        Search for deleted vods
-      </span>
-    </div>
-    <div
-      class="styles__Container-cfnpnh-0 fkFsiv"
-    >
-      <span>
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11"
-            cy="11"
-            r="8"
-          />
-          <line
-            x1="21"
-            x2="16.65"
-            y1="21"
-            y2="16.65"
-          />
-        </svg>
-        Download Twitch Clips
-      </span>
-    </div>
-    <div
-      class="styles__Container-cfnpnh-0 fkFsiv"
-    >
-      <span>
-        Home
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-          />
-          <polyline
-            points="15 3 21 3 21 9"
-          />
-          <line
-            x1="10"
-            x2="21"
-            y1="14"
-            y2="3"
-          />
-        </svg>
-      </span>
-      <span>
-        Search for Deleted Clips
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-          />
-          <polyline
-            points="15 3 21 3 21 9"
-          />
-          <line
-            x1="10"
-            x2="21"
-            y1="14"
-            y2="3"
-          />
-        </svg>
-      </span>
-      <span>
-        Search for Deleted Vods
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-          />
-          <polyline
-            points="15 3 21 3 21 9"
-          />
-          <line
-            x1="10"
-            x2="21"
-            y1="14"
-            y2="3"
-          />
-        </svg>
-      </span>
-      <span>
-        Download Twitch Clips
-        <svg
-          fill="none"
-          height="14"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-          />
-          <polyline
-            points="15 3 21 3 21 9"
-          />
-          <line
-            x1="10"
-            x2="21"
-            y1="14"
-            y2="3"
-          />
-        </svg>
-      </span>
+      </a>
     </div>
   </div>,
   "debug": [Function],

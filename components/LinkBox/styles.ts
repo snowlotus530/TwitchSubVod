@@ -19,9 +19,14 @@ export const Container = styled.div`
     svg {
       margin: 0 0.5rem 0 0.75rem;
     }
+  }
+`;
 
-    a {
-      color: var(--text);
-    }
+export const Link = styled.a`
+  color: var(--text);
+  transition: color 0.1s ease;
+
+  :hover {
+    color: var(--purple);
   }
 `;

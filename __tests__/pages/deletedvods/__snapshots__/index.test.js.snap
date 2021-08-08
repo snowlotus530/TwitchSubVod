@@ -187,34 +187,40 @@ exports[`should render Deleted Vods correctly 1`] = `
         </button>
       </form>
       <div
-        class="styles__Container-cfnpnh-0 fkFsiv"
+        class="styles__Container-cfnpnh-0 hlHjgV"
       >
-        <span>
-          <svg
-            fill="none"
-            height="14"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="14"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="11"
-              cy="11"
-              r="8"
-            />
-            <line
-              x1="21"
-              x2="16.65"
-              y1="21"
-              y2="16.65"
-            />
-          </svg>
-          Home
-        </span>
+        <a
+          aria-label="Home"
+          class="styles__Link-cfnpnh-1 bvpnnQ"
+          href="/"
+        >
+          <span>
+            <svg
+              fill="none"
+              height="14"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+              />
+              <line
+                x1="21"
+                x2="16.65"
+                y1="21"
+                y2="16.65"
+              />
+            </svg>
+            Home
+          </span>
+        </a>
       </div>
     </div>
     <div

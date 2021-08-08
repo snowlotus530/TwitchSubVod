@@ -84,8 +84,8 @@ export const AvatarsGroupContainer = styled.div`
 `;
 
 export const AvatarsGroup = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(227px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(337px, auto));
   grid-gap: 1rem;
 `;

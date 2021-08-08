@@ -8,7 +8,9 @@ import LoadingModal from '@/components/LoadingModal';
 import SearchInput from '@/components/SearchInput';
 import Footer from '@/components/Footer';
 import LinkBox from '@/components/LinkBox';
-import streamersPaths from './data.json';
+import { getMostWatchedStreamers } from '@/utils/backend/queries';
+import dbConnect from '@/utils/backend/lib/dbConnect';
+
 import { useGlobal } from '@/stores/GlobalContext';
 import { Container } from '@/styles/Home';
 
@@ -31,8 +33,13 @@ interface TwitchVideoProps {
 }
 
 export const getStaticPaths = async () => {
-  const paths = streamersPaths.mostSearchedStreamers.map((streamerPath) => {
-    return { params: { streamer: streamerPath.toLowerCase() } };
+  await dbConnect();
+  const mostWatchedRanking = await getMostWatchedStreamers(100, 0);
+
+  console.log('GET getMostWatchedStreamers fn(getStaticPaths) screen(/videos)');
+
+  const paths = mostWatchedRanking.map((streamerPath) => {
+    return { params: { streamer: streamerPath.streamer.toLowerCase() } };
   });
 
   return {
@@ -69,7 +76,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       twitchData,
     },
-    revalidate: 60,
+    revalidate: 6 * 60 * 60, // 6 hours (in seconds)
   };
 };
 

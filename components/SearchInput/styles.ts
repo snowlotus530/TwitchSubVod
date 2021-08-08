@@ -43,6 +43,12 @@ export const Container = styled.form<ContainerProps>`
     border: 2px solid var(--purple);
     color: var(--button-text);
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+    transition: all 0.1s ease;
+
+    :hover {
+      background: var(--dark-purple);
+      border: 2px solid var(--dark-purple);
+    }
 
     & svg {
       margin-right: 0.5rem;

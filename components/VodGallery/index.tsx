@@ -174,7 +174,7 @@ const VodGallery = ({ data }: any) => {
   return (
     <>
       {data && !error && (
-        <Link href={streamerInformation.url}>
+        <Link href={streamerInformation.url} prefetch={false}>
           <a target="_blank" rel="noopener noreferrer">
             <StreamerInformation>
               <div title={streamerInformation.description}>

@@ -39,14 +39,12 @@ const SearchInput = (): any => {
         })
         .catch((err) => {
           console.warn(err);
-          throw new Error(err);
         });
   }, [username]);
 
   const handleSubmit = () => {
     if (username) {
       setLoading(true);
-      router.prefetch(`/videos/${username}`);
       try {
         setError('');
         api
@@ -57,19 +55,11 @@ const SearchInput = (): any => {
                 .get(`channels/${response.data.users[0]._id}/videos?limit=1`)
                 .then((channelResponse: any) => {
                   if (channelResponse.data.videos.length !== 0) {
-                    router.push(`/videos/${username}`, undefined, {
-                      scroll: false,
-                    });
-                    setVodUrl('');
-                    inputRef.current?.blur();
-                    window.scrollTo({ behavior: 'smooth', top: 340 });
+                    location.href = `/videos/${username}`;
                   }
                   if (channelResponse.data._total === 0) {
                     setError(`${username} does not have any available streams`);
                   }
-                })
-                .finally(() => {
-                  setLoading(false);
                 });
 
               ReactGA.event({
@@ -77,22 +67,18 @@ const SearchInput = (): any => {
                 action: `${username}`,
               });
             } catch (err) {
+              setLoading(false);
               setError('This user does not exist or is unavailable');
-              throw new Error('This user does not exist or is unavailable');
             }
           })
           .catch((err) => {
-            setError(err.response.data.message);
-            throw new Error(err);
-          })
-          .finally(() => {
+            setError(err.response?.data?.message);
             setLoading(false);
           });
       } catch (err) {
         console.warn(err);
         setLoading(false);
         setError('Something went wrong');
-        throw new Error(err);
       }
     } else {
       setError('Enter a streamer username');
