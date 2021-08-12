@@ -36,14 +36,33 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       } = JSON.parse(req.body.data);
 
       if (timestamp && amount && email && kofi_transaction_id) {
-        // offsets data to 1 hour in the future (with -7 hours timezone offset)
+        // send discord notification via webhook
+        await axios.post(`${process.env.DISCORD_WEBHOOK_URL}`, {
+          username: 'pogu.live',
+          avatar_url: 'https://pogu.live/android-chrome-192x192.png',
+          embeds: [
+            {
+              title: 'New ko-fi donation',
+              description: `Donation of $${amount} by ${from_name} (${email})`,
+              color: 7419530,
+              fields: [
+                {
+                  name: `${message}`,
+                  value: `${url}`,
+                },
+              ],
+            },
+          ],
+        });
+
+        // offsets data to 10 hour in the future (with -7 hours timezone offset)
         const futureDate = moment(timestamp)
-          .add('6:00')
+          .add('17:00')
           .format('YYYY-MM-DDTHH:mm:ss-0700');
 
-        // offsets data to 1 hour in the past (with -7 hours timezone offset)
+        // offsets data to 10 hour in the past (with -7 hours timezone offset)
         const pastDate = moment(timestamp)
-          .subtract('8:00')
+          .subtract('17:00')
           .format('YYYY-MM-DDTHH:mm:ss-0700');
 
         try {
@@ -95,31 +114,39 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             { upsert: true, new: true },
           );
 
-          // send discord notification via webhook
+          console.log('POST /webhook/kofi', createOrUpdateSupporter);
+          return res.status(200).json({ success: true });
+        } catch (error) {
+          console.log('ERROR POST /webhook/kofi', {
+            ...error.response.data,
+            url: error.response.config.url,
+          });
+
+          // send discord error notification via webhook
           await axios.post(`${process.env.DISCORD_WEBHOOK_URL}`, {
             username: 'pogu.live',
             avatar_url: 'https://pogu.live/android-chrome-192x192.png',
             embeds: [
               {
-                title: 'New ko-fi donation',
-                description: `Donation of $${amount} by ${from_name} (${email})`,
-                color: 7419530,
+                title: 'Something went wrong',
+                description: `${
+                  error.response.data.error_description ||
+                  JSON.stringify(error.response.data) ||
+                  'Stripe not integrated yet 🤷'
+                }`,
+                color: 15158332,
                 fields: [
                   {
-                    name: `${message}`,
-                    value: `${url}`,
+                    name: `Request failed at:`,
+                    value: `${error.response.config.url}`,
                   },
                 ],
               },
             ],
           });
 
-          console.log('POST /webhook/kofi', createOrUpdateSupporter);
-          return res.status(200).json({ success: true });
-        } catch (error) {
-          console.log('ERROR POST /webhook/kofi', error.message);
           return res
-            .status(500)
+            .status(400)
             .json({ error: true, message: 'Something went wrong' });
         }
       } else {
