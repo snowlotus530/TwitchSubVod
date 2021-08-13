@@ -17,7 +17,9 @@ Object {
           id="quality"
           name="quality"
         >
-          <option>
+          <option
+            value="chunked"
+          >
             Source
           </option>
           <option
@@ -107,7 +109,9 @@ Object {
         id="quality"
         name="quality"
       >
-        <option>
+        <option
+          value="chunked"
+        >
           Source
         </option>
         <option

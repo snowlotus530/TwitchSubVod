@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ReactGA from 'react-ga';
 import { FiSearch } from 'react-icons/fi';
-import { useRouter } from 'next/router';
 import api from '@/utils/services/api';
 import apiV2 from '@/utils/services/apiV2';
 import { useGlobal } from '@/stores/GlobalContext';
@@ -14,8 +13,11 @@ interface AutoCompleteProps {
   display_name: string;
 }
 
-const SearchInput = (): any => {
-  const router = useRouter();
+interface Props {
+  withQuality?: boolean;
+}
+
+const SearchInput = ({ withQuality }: Props) => {
   const inputRef = useRef<any>();
   const {
     setVideoQuality,
@@ -87,6 +89,11 @@ const SearchInput = (): any => {
 
   const isDisabled = username.length <= 0;
 
+  const handleQuality = (event: any) => {
+    setVideoQuality(event.target.value);
+    setVodUrl('');
+  };
+
   return (
     <Container
       onSubmit={(event) => {
@@ -114,9 +121,9 @@ const SearchInput = (): any => {
             <option key={user.display_name} value={user.display_name} />
           ))}
       </datalist>
-      <QualitySelection
-        onChange={(event: any) => setVideoQuality(event.target.value)}
-      />
+      {withQuality && (
+        <QualitySelection onChange={(event: any) => handleQuality(event)} />
+      )}
       <button type="submit" aria-label="submit" disabled={isDisabled}>
         <FiSearch size={14} />
         Search

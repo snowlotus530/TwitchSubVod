@@ -8,7 +8,7 @@ const QualitySelection = ({ ...rest }): any => {
     <Container>
       <label htmlFor="quality">Select a quality: </label>
       <select name="quality" id="quality" {...rest}>
-        <option defaultValue="chunked">Source</option>
+        <option value="chunked">Source</option>
         <option value="720p60">720p60</option>
         <option value="720p30">720p30</option>
         <option value="480p30">480p</option>

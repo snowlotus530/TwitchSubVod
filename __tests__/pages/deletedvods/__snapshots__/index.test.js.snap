@@ -81,7 +81,9 @@ exports[`should render Deleted Vods correctly 1`] = `
             id="quality"
             name="quality"
           >
-            <option>
+            <option
+              value="chunked"
+            >
               Source
             </option>
             <option

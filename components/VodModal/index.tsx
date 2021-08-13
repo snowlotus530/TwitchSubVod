@@ -4,12 +4,14 @@ import ReactPlayer from 'react-player';
 import { FaWindowClose } from 'react-icons/fa';
 import { Player } from 'video-react';
 
+import { useGlobal } from '@/stores/GlobalContext';
 import { Container, Ads } from './styles';
 
 // 7days * 24 hours * 60 minutes * 60 seconds * 1000ms
 const timeInterval = 7 * 24 * 60 * 60 * 1000;
 
 const VodModal = ({ videoUrl, previewUrl }: any) => {
+  const { videoQuality } = useGlobal();
   const [showAd, setShowAd] = useState(false);
   useEffect(() => {
     const paymentTime = Number(localStorage.getItem('paymentTime'));
@@ -85,7 +87,9 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
                   xhrSetup: (xhr: any, _url: string) => {
                     xhr.open(
                       'GET',
-                      _url.replace('unmuted.ts', 'muted.ts'),
+                      _url
+                        .replace('unmuted.ts', 'muted.ts')
+                        .replace('chunked', videoQuality),
                       true,
                     );
                   },
@@ -96,7 +100,7 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
         )}
       </>
     );
-  }, [videoUrl, showAd, setShowAd]);
+  }, [videoUrl, showAd, setShowAd, videoQuality]);
 
   return <Container>{renderVodModal}</Container>;
 };
