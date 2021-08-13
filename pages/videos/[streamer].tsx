@@ -131,7 +131,7 @@ const Videos = ({
           <img src="/favicon.ico" alt="PogU.live" />
           <h1>PogU</h1>
         </span>
-        <SearchInput />
+        <SearchInput withQuality={true} />
         <LinkBox all={true} />
         <VodGallery data={data.videos} quality={videoQuality} />
         <Footer />

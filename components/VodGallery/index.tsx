@@ -60,6 +60,7 @@ const VodGallery = ({ data }: any) => {
   const [error, setError] = useState(false);
 
   const handleVideo = async (result: any) => {
+    setError(false);
     setPreviewUrl(result.preview.medium);
 
     const splitString = await result.animated_preview_url.match(
@@ -169,7 +170,7 @@ const VodGallery = ({ data }: any) => {
         </div>
       );
     });
-  }, [videos]);
+  }, [videos, videoQuality]);
 
   return (
     <>
@@ -209,12 +210,7 @@ const VodGallery = ({ data }: any) => {
           </a>
         </>
       )}
-      {error && !vodUrl && videoQuality === 'chunked' && (
-        <ErrorModal message="We couldn't find this video" />
-      )}
-      {error && !vodUrl && videoQuality !== 'chunked' && (
-        <ErrorModal message="We couldn't find this video, try changing the quality to 'Source'" />
-      )}
+      {error && <ErrorModal message="Something went wrong" />}
 
       <Container>
         {renderVideos}
