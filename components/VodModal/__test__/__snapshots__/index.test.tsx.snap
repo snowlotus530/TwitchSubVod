@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="styles__Container-xygqpp-0 kpTccR"
+        class="styles__Container-xygqpp-0 hoGEtO"
       >
         <div
-          class="styles__Ads-xygqpp-1 jsbtIi"
+          class="styles__Ads-xygqpp-1 ccrZEW"
         >
           <div>
             <a
@@ -54,6 +54,41 @@ Object {
           </button>
         </div>
         <div
+          class="styles__CustomOptions-xygqpp-2 kMIVgN"
+        >
+          <select>
+            <option
+              value="0.5"
+            >
+              Speed 0.5x
+            </option>
+            <option
+              value="0.75"
+            >
+              Speed 0.75x
+            </option>
+            <option
+              selected=""
+              value="1"
+            >
+              Speed 1x
+            </option>
+            <option
+              value="2"
+            >
+              Speed 2x
+            </option>
+          </select>
+          <button>
+            Clip it
+             
+            <img
+              src="https://static-cdn.jtvnw.net/emoticons/v2/425618/default/dark/3.0"
+              title="LUL"
+            />
+          </button>
+        </div>
+        <div
           style="width: 100%; height: 100%;"
         />
       </div>
@@ -61,10 +96,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="styles__Container-xygqpp-0 kpTccR"
+      class="styles__Container-xygqpp-0 hoGEtO"
     >
       <div
-        class="styles__Ads-xygqpp-1 jsbtIi"
+        class="styles__Ads-xygqpp-1 ccrZEW"
       >
         <div>
           <a
@@ -106,6 +141,41 @@ Object {
               d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-83.6 290.5c4.8 4.8 4.8 12.6 0 17.4l-40.5 40.5c-4.8 4.8-12.6 4.8-17.4 0L256 313.3l-66.5 67.1c-4.8 4.8-12.6 4.8-17.4 0l-40.5-40.5c-4.8-4.8-4.8-12.6 0-17.4l67.1-66.5-67.1-66.5c-4.8-4.8-4.8-12.6 0-17.4l40.5-40.5c4.8-4.8 12.6-4.8 17.4 0l66.5 67.1 66.5-67.1c4.8-4.8 12.6-4.8 17.4 0l40.5 40.5c4.8 4.8 4.8 12.6 0 17.4L313.3 256l67.1 66.5z"
             />
           </svg>
+        </button>
+      </div>
+      <div
+        class="styles__CustomOptions-xygqpp-2 kMIVgN"
+      >
+        <select>
+          <option
+            value="0.5"
+          >
+            Speed 0.5x
+          </option>
+          <option
+            value="0.75"
+          >
+            Speed 0.75x
+          </option>
+          <option
+            selected=""
+            value="1"
+          >
+            Speed 1x
+          </option>
+          <option
+            value="2"
+          >
+            Speed 2x
+          </option>
+        </select>
+        <button>
+          Clip it
+           
+          <img
+            src="https://static-cdn.jtvnw.net/emoticons/v2/425618/default/dark/3.0"
+            title="LUL"
+          />
         </button>
       </div>
       <div
