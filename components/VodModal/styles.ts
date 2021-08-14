@@ -20,12 +20,19 @@ export const Container = styled.div`
   height: 33.75rem;
 
   .react-player {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
 
     iframe {
       height: 100vh;
+    }
+  }
+
+  :hover {
+    div {
+      opacity: 1;
     }
   }
 
@@ -46,7 +53,8 @@ export const Container = styled.div`
 `;
 
 export const Ads = styled.div<AdsProps>`
-  z-index: ${({ isVisible }) => (isVisible ? '10' : '-1')};
+  z-index: ${({ isVisible }) => (isVisible ? '3' : '-1')};
+  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
   padding: 10% 20%;
   display: flex;
   flex-direction: column;
@@ -153,6 +161,54 @@ export const Ads = styled.div<AdsProps>`
       svg {
         margin-left: 0;
       }
+    }
+  }
+`;
+
+export const CustomOptions = styled.div`
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  select,
+  button {
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 20px;
+    padding: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+
+    :hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    transition: all 0.1s ease;
+
+    img {
+      margin-left: 0.5rem;
+      border: 0px solid rgba(0, 0, 0, 0);
+      width: 20px;
+    }
+
+    :hover {
+      background: var(--dark-purple);
     }
   }
 `;
