@@ -53,6 +53,10 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
     /^iP/.test(navigator.platform) ||
     (/^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4);
 
+  const isSafari = () => {
+    return navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+  };
+
   const renderVodModal = useMemo(() => {
     return (
       <>
@@ -96,7 +100,7 @@ const VodModal = ({ videoUrl, previewUrl }: any) => {
           </>
         ) : (
           <>
-            <CustomOptions>
+            <CustomOptions isSafari={isSafari()}>
               <select
                 defaultValue="1"
                 onChange={(e) => setPlaybackRate(Number(e.target.value))}
