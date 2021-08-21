@@ -165,7 +165,11 @@ export const Ads = styled.div<AdsProps>`
   }
 `;
 
-export const CustomOptions = styled.div`
+interface ICustomOptions {
+  isSafari?: boolean;
+}
+
+export const CustomOptions = styled.div<ICustomOptions>`
   position: absolute;
   height: fit-content;
   width: fit-content;
@@ -174,7 +178,7 @@ export const CustomOptions = styled.div`
   gap: 8px;
   opacity: 0;
   z-index: 2;
-  top: 8px;
+  top: ${({ isSafari }) => (isSafari ? '42px' : '8px')};
   left: 8px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
