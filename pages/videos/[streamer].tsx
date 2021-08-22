@@ -8,10 +8,7 @@ import LoadingModal from '@/components/LoadingModal';
 import SearchInput from '@/components/SearchInput';
 import Footer from '@/components/Footer';
 import LinkBox from '@/components/LinkBox';
-import {
-  getMostWatchedStreamers,
-  getBannedStreamers,
-} from '@/utils/backend/queries';
+import { getMostWatchedStreamers } from '@/utils/backend/queries';
 import dbConnect from '@/utils/backend/lib/dbConnect';
 
 import { useGlobal } from '@/stores/GlobalContext';
@@ -69,7 +66,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     });
 
-  const bannedStreamers = await getBannedStreamers();
+  const allBannedStreamers = process.env.BANNED_STREAMERS?.split(',') || [];
+  const bannedStreamers = allBannedStreamers.map((streamer) => ({
+    streamer,
+  }));
 
   if (
     !twitchData ||
